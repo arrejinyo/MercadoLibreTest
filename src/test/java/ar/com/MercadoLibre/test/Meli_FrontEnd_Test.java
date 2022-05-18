@@ -1,22 +1,29 @@
-package test;
+package ar.com.MercadoLibre.test;
 
-import Pages.MeliPage;
 
+import ar.com.MercadoLibre.Ambiente;
+import ar.com.MercadoLibre.pages.MeliPage;
+import org.aeonbits.owner.ConfigFactory;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
 public class Meli_FrontEnd_Test extends BaseTest {
 
-
+    private Ambiente ambiente;
     MeliPage objMeliPage;
 
+    @Test
+    public void ambiente() {
+        System.out.println("Iniciando ambiente: " + System.getProperty("ambiente"));
+        ambiente = ConfigFactory.create(Ambiente.class);
 
+    }
 
-    @Test()
+    @Test(dependsOnMethods = "ambiente")
     public void Ingreso(){
         objMeliPage = new MeliPage(this.driver);
-        driver.get("http://www.mercadolibre.com.ar");
+        driver.get(ambiente.urlMercadoLibre());
         objMeliPage.acceptCokkies();
         Assert.assertTrue(objMeliPage.isConnected(), "No se pudo ingresar en el sitio");
     }
@@ -59,7 +66,7 @@ public class Meli_FrontEnd_Test extends BaseTest {
     }
 
     @Test(dependsOnMethods = "Ingreso", priority = 6)
-    public void elegirCategoriaYvalidar(){
+        public void elegirCategoriaYvalidar(){
         objMeliPage = new MeliPage(this.driver);
         objMeliPage.selectCategories("Tecnología","Videojuegos");
         objMeliPage.findByText("Capital Federal").click();

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" thread-count="10">
+    <!-- Este apartado Listener es lo que activa nuestro Framework de Reportes -->
+
+    <test verbose="2" name="Meli FrontEnd Test">
+        <classes>
+            <class name="ar.com.MercadoLibre.test.Meli_FrontEnd_Test">
+                <methods>
+                    <include name="ambiente"/>
+                    <include name="Ingreso"/>
+                    <include name="seleccionarAires"/>
+                    <include name="seleccionarCelularesYSmartphones"/>
+                    <include name="seleccionarBelleza"/>
+                    <include name="seleccionarHerramientas"/>
+                    <include name="seleccionarCuartoDelBebe"/>
+                    <include name="elegirCategoriaYvalidar"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

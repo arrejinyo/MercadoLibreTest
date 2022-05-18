@@ -1,4 +1,4 @@
-package Pages;
+package ar.com.MercadoLibre.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

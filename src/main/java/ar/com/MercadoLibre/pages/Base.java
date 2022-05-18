@@ -1,4 +1,4 @@
-package Pages;
+package ar.com.MercadoLibre.pages;
 
 import com.paulhammant.ngwebdriver.NgWebDriver;
 import org.openqa.selenium.*;

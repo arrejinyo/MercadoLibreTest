@@ -1,4 +1,4 @@
-package test;
+package ar.com.MercadoLibre.test;
 
 
 import java.util.concurrent.TimeUnit;

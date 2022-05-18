@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Regresion Completa" parallel="false">
+    <suite-files>
+        <suite-file path="MercadoLibre/Meli_BackEnd_TestSuite.xml"/>
+        <suite-file path="MercadoLibre/Meli_FrontEnd_TestSuite.xml"/>
+
+    </suite-files>
+</suite>
